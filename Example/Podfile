@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MyFeature_Example' do
+  pod 'MyFeature', :path => '../'
+
+  target 'MyFeature_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
