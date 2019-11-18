@@ -26,6 +26,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="kdq-jH-1gx" firstAttribute="centerX" secondItem="Ovj-Rz-yTi" secondAttribute="centerX" id="5dK-au-mEF"/>
                         <constraint firstAttribute="trailing" secondItem="kdq-jH-1gx" secondAttribute="trailing" constant="16" id="HsC-Gm-1jV"/>
                         <constraint firstItem="kdq-jH-1gx" firstAttribute="leading" secondItem="Ovj-Rz-yTi" secondAttribute="leading" constant="16" id="IoE-VB-LeI"/>
                         <constraint firstItem="kdq-jH-1gx" firstAttribute="centerY" secondItem="Ovj-Rz-yTi" secondAttribute="centerY" id="zrc-LD-MNy"/>
@@ -41,11 +42,6 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
-                <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="overlay"/>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="titleLabel" destination="kdq-jH-1gx" id="PYW-KY-ift"/>
                 <outlet property="topView" destination="Ovj-Rz-yTi" id="3qm-ph-vmx"/>

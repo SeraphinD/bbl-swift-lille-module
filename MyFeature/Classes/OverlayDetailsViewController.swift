@@ -25,11 +25,6 @@ final class OverlayDetailsViewController: UIViewController {
             descriptionLabel.setStyle(textStyles.s1_subtitle_basic_100)
         }
     }
-    @IBOutlet private weak var codeLabel: UILabel! {
-        didSet {
-            codeLabel.setStyle(textStyles.h5_headline_basic_100)
-        }
-    }
     @IBOutlet private weak var codeImageView: UIImageView! {
         didSet {
             codeImageView.contentMode = .scaleAspectFit
@@ -75,7 +70,6 @@ final class OverlayDetailsViewController: UIViewController {
             self.titleLabel.alpha = 1
             self.descriptionLabel.alpha = 1
             self.codeImageView.alpha = 1
-            self.codeLabel.alpha = 1
         }
         UIScreen.main.brightness = CGFloat(1)
     }
@@ -136,16 +130,14 @@ final class OverlayDetailsViewController: UIViewController {
     }
     
     private func setValues() {
-        titleLabel.text = NSLocalizedString("title", comment: "")
+        titleLabel.text = NSLocalizedString("title_details", comment: "")
         descriptionLabel.text = NSLocalizedString("description", comment: "")
-        codeLabel.text = NSLocalizedString("code", comment: "")
     }
     
     private func hideValues() {
         titleLabel.alpha = 0
         descriptionLabel.alpha = 0
         codeImageView.alpha = 0
-        codeLabel.alpha = 0
     }
     
 }

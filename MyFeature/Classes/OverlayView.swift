@@ -25,9 +25,6 @@ final public class OverlayView: UIView {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
         tapGestureRecognizer.cancelsTouchesInView = false
         addGestureRecognizer(tapGestureRecognizer)
-    }
-    
-    func updateUI() {
         titleLabel.text = NSLocalizedString("title", comment: "")
         titleLabel.alpha = 0
         UIView.animate(withDuration: 0.2) {
@@ -48,8 +45,6 @@ final public class OverlayView: UIView {
     }
     
     @objc private func didTapView(_ sender: UITapGestureRecognizer) {
-        topView.tintColor = colors.basic(tint: 100)
-        titleLabel.text = nil
         onTap?()
     }
     
