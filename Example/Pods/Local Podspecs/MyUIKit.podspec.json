@@ -1,0 +1,34 @@
+{
+  "name": "MyUIKit",
+  "version": "0.1.0",
+  "summary": "A short description of MyUIKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/SeraphinD/bbl-swift-lille-uikit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Séraphin": "seraphin.desumeur@outlook.fr"
+  },
+  "source": {
+    "git": "https://github.com/SeraphinD/bbl-swift-lille-uikit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MyUIKit/Classes/**/*",
+  "ios": {
+    "script_phases": {
+      "name": "Design Token Script",
+      "script": "if [ -d \"../../${PRODUCT_NAME}/Classes\" ]; then\ncd ..\npython3 Scripts/design_token.py -p \"../${PRODUCT_NAME}/Classes/design.swift\" \"1\"\nfi",
+      "execution_position": "before_compile"
+    }
+  },
+  "resource_bundles": {
+    "MyUIKit": [
+      "MyUIKit/Assets/**.*"
+    ]
+  }
+}

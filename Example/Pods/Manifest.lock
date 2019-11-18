@@ -1,0 +1,22 @@
+PODS:
+  - MyFeature (0.1.0):
+    - MyUIKit
+  - MyUIKit (0.1.0)
+
+DEPENDENCIES:
+  - MyFeature (from `../`)
+  - MyUIKit (from `../../MyUIKit/`)
+
+EXTERNAL SOURCES:
+  MyFeature:
+    :path: "../"
+  MyUIKit:
+    :path: "../../MyUIKit/"
+
+SPEC CHECKSUMS:
+  MyFeature: 49b2839109e290933c5512db910e7c49d722c740
+  MyUIKit: d29fb7bf977c26975afdf23bc3627064ca277d6e
+
+PODFILE CHECKSUM: a9a7cd8f6ca500431d3330b933394197aefe2138
+
+COCOAPODS: 1.8.3

@@ -1,0 +1,32 @@
+{
+  "name": "MyFeature",
+  "version": "0.1.0",
+  "summary": "A short description of MyFeature.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/SeraphinD/bbl-swift-lille-module",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Séraphin": "seraphin.desumeur@outlook.fr"
+  },
+  "source": {
+    "git": "https://github.com/SeraphinD/bbl-swift-lille-module.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "MyFeature/Classes/**/*",
+  "resource_bundles": {
+    "MyFeature": [
+      "MyFeature/Resources/**/*"
+    ]
+  },
+  "dependencies": {
+    "MyUIKit": [
+
+    ]
+  }
+}

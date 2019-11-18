@@ -1,0 +1,6 @@
+framework module MyUIKit {
+  umbrella header "MyUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

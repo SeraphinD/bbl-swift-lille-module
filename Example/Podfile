@@ -1,6 +1,7 @@
 use_frameworks!
 
 target 'MyFeature_Example' do
+  pod 'MyUIKit', :path => '../../MyUIKit/'
   pod 'MyFeature', :path => '../'
 
   target 'MyFeature_Tests' do
