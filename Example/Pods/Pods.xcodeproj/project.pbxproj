@@ -426,7 +426,7 @@
 			buildConfigurationList = 190ACA9EB7F8CD7687FC8A903D0D613B /* Build configuration list for PBXNativeTarget "MyUIKit" */;
 			buildPhases = (
 				4C9FBBEA340A1778D76FBD0B0A98EFAD /* Headers */,
-				1C1334F66F80994E3D63320840175B7A /* [CP-User] Design Token Script */,
+				2D207397A234C2CCF316E3ADF08E025D /* [CP-User] Design Token Script */,
 				91B31D0CE26762A26F7E99A15659E59D /* Sources */,
 				E20CC4DE8C40C69993205DA6A2663180 /* Frameworks */,
 				D7DE650DD2C3044BA51A323EC65E4375 /* Resources */,
@@ -617,7 +617,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C1334F66F80994E3D63320840175B7A /* [CP-User] Design Token Script */ = {
+		2D207397A234C2CCF316E3ADF08E025D /* [CP-User] Design Token Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,7 +625,7 @@
 			name = "[CP-User] Design Token Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -d \"../../${PRODUCT_NAME}/Classes\" ]; then\ncd ..\npython3 Scripts/design_token.py -p \"../${PRODUCT_NAME}/Classes/design.swift\" \"1\"\nfi";
+			shellScript = "if [ -d \"../../${PRODUCT_NAME}/Classes\" ]; then\ncd ..\n/usr/local/bin/python3 Scripts/design_token.py -p \"../${PRODUCT_NAME}/Classes/design.swift\" \"1\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -18,6 +18,7 @@
   "platforms": {
     "ios": "10.0"
   },
+  "swift_versions": "4.0",
   "source_files": "MyFeature/Classes/**/*",
   "resource_bundles": {
     "MyFeature": [
@@ -28,5 +29,6 @@
     "MyUIKit": [
 
     ]
-  }
+  },
+  "swift_version": "4.0"
 }

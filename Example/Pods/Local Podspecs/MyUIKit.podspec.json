@@ -18,11 +18,12 @@
   "platforms": {
     "ios": "10.0"
   },
+  "swift_versions": "4.0",
   "source_files": "MyUIKit/Classes/**/*",
   "ios": {
     "script_phases": {
       "name": "Design Token Script",
-      "script": "if [ -d \"../../${PRODUCT_NAME}/Classes\" ]; then\ncd ..\npython3 Scripts/design_token.py -p \"../${PRODUCT_NAME}/Classes/design.swift\" \"1\"\nfi",
+      "script": "if [ -d \"../../${PRODUCT_NAME}/Classes\" ]; then\ncd ..\n/usr/local/bin/python3 Scripts/design_token.py -p \"../${PRODUCT_NAME}/Classes/design.swift\" \"1\"\nfi",
       "execution_position": "before_compile"
     }
   },
@@ -30,5 +31,6 @@
     "MyUIKit": [
       "MyUIKit/Assets/**.*"
     ]
-  }
+  },
+  "swift_version": "4.0"
 }
