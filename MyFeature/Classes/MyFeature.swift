@@ -1,4 +1,4 @@
-final class MyFeature {
+final public class MyFeature {
     
     private init() {}
     public static let shared = MyFeature()
@@ -10,6 +10,7 @@ final class MyFeature {
         return Bundle(url: bundleUrl)
     }
     
+    @discardableResult
     public func showOverlay(from viewController: UIViewController) -> OverlayView {
         let overlayView: OverlayView! = bundle
             .loadNibNamed("OverlayView",
