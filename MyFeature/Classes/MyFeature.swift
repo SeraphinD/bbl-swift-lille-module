@@ -3,7 +3,7 @@ final public class MyFeature {
     private init() {}
     public static let shared = MyFeature()
 
-    public var bundle: Bundle! {
+    var bundle: Bundle! {
         let podBundle: Bundle! = Bundle(for: MyFeature.self)
         let bundleUrl: URL! = podBundle.url(forResource: "MyFeature",
                                             withExtension: "bundle")
