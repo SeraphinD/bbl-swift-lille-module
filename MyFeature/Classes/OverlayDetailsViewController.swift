@@ -22,7 +22,7 @@ final class OverlayDetailsViewController: UIViewController {
     }
     @IBOutlet private weak var descriptionLabel: UILabel! {
         didSet {
-            descriptionLabel.setStyle(textStyles.s1_subtitle_basic_100)
+            descriptionLabel.setStyle(textStyles.p1_paragraph_basic_100)
         }
     }
     @IBOutlet private weak var codeImageView: UIImageView! {

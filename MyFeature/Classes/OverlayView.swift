@@ -20,7 +20,7 @@ final public class OverlayView: UIView {
     
     var onTap: (() -> Void)?
     
-    public override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
         tapGestureRecognizer.cancelsTouchesInView = false
