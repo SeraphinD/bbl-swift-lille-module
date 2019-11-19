@@ -2,23 +2,7 @@ import MyUIKit
 
 final public class OverlayView: UIView {
     
-    let height: CGFloat = 38
-    let width: CGFloat = 120
-    
-    @IBOutlet private weak var titleLabel: UILabel! {
-        didSet {
-            titleLabel.setStyle(textStyles.button_medium_basic_100)
-        }
-    }
-    
-    @IBOutlet weak var topView: UIView! {
-        didSet {
-            topView.backgroundColor = colors.primary_01(tint: 600)
-            topView.layer.cornerRadius = 20
-        }
-    }
-    
-    var onTap: (() -> Void)?
+    // MARK: - PUBLIC
     
     override public func awakeFromNib() {
         super.awakeFromNib()
@@ -42,10 +26,6 @@ final public class OverlayView: UIView {
         UIView.animate(withDuration: 0.2) {
             self.transform = .identity
         }
-    }
-    
-    @objc private func didTapView(_ sender: UITapGestureRecognizer) {
-        onTap?()
     }
     
     public func appear(from topViewController: UIViewController) {
@@ -77,6 +57,32 @@ final public class OverlayView: UIView {
         
         topViewController.view.addSubview(self)
         show()
+    }
+    
+    // MARK: - INTERNAL
+    
+    let height: CGFloat = 38
+    let width: CGFloat = 120
+    
+    var onTap: (() -> Void)?
+    
+    // MARK: - PRIVATE
+    
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.setStyle(textStyles.button_medium_basic_100)
+        }
+    }
+    
+    @IBOutlet private weak var topView: UIView! {
+        didSet {
+            topView.backgroundColor = colors.primary_01(tint: 600)
+            topView.layer.cornerRadius = 20
+        }
+    }
+    
+    @objc private func didTapView(_ sender: UITapGestureRecognizer) {
+        onTap?()
     }
 }
 

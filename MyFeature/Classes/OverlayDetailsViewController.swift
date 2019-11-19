@@ -2,35 +2,7 @@ import MyUIKit
 
 final class OverlayDetailsViewController: UIViewController {
     
-    @IBOutlet private weak var backgroundView: UIView!
-    @IBOutlet private weak var closeView: UIView! {
-        didSet {
-            closeView.backgroundColor = colors.basic(tint: 100)
-        }
-    }
-    @IBOutlet private weak var closeImageView: UIImageView!
-    @IBOutlet private weak var closeLabel: UILabel! {
-        didSet {
-            closeLabel.setStyle(textStyles.button_medium_basic_600)
-        }
-    }
-    @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var titleLabel: UILabel! {
-        didSet {
-            titleLabel.setStyle(textStyles.h2_headline_basic_100)
-        }
-    }
-    @IBOutlet private weak var descriptionLabel: UILabel! {
-        didSet {
-            descriptionLabel.setStyle(textStyles.p1_paragraph_basic_100)
-        }
-    }
-    @IBOutlet private weak var codeImageView: UIImageView! {
-        didSet {
-            codeImageView.contentMode = .scaleAspectFit
-        }
-    }
-    
+    // MARK: - INTERNAL
     
     var onDismiss: (() -> Void)?
     var oldBrightness: CGFloat!
@@ -79,14 +51,14 @@ final class OverlayDetailsViewController: UIViewController {
         UIScreen.main.brightness = oldBrightness
     }
     
-    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard touches.first?.view == closeView else { return }
         UIView.animate(withDuration: 0.2) {
             self.closeView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         }
     }
     
-    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard touches.first?.view == closeView else { return }
         UIView.animate(withDuration: 0.2) {
             self.closeView.transform = .identity
@@ -103,6 +75,37 @@ final class OverlayDetailsViewController: UIViewController {
                        animations: { [weak self] in
                         self?.closeView.transform = .identity
         })
+    }
+    
+    // MARK: - PRIVATE
+    
+    @IBOutlet private weak var backgroundView: UIView!
+    @IBOutlet private weak var closeView: UIView! {
+        didSet {
+            closeView.backgroundColor = colors.basic(tint: 100)
+        }
+    }
+    @IBOutlet private weak var closeImageView: UIImageView!
+    @IBOutlet private weak var closeLabel: UILabel! {
+        didSet {
+            closeLabel.setStyle(textStyles.button_medium_basic_600)
+        }
+    }
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel! {
+        didSet {
+            titleLabel.setStyle(textStyles.h2_headline_basic_100)
+        }
+    }
+    @IBOutlet private weak var descriptionLabel: UILabel! {
+        didSet {
+            descriptionLabel.setStyle(textStyles.p1_paragraph_basic_100)
+        }
+    }
+    @IBOutlet private weak var codeImageView: UIImageView! {
+        didSet {
+            codeImageView.contentMode = .scaleAspectFit
+        }
     }
     
     private func configureUI() {

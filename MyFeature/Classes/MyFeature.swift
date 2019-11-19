@@ -3,7 +3,7 @@ final public class MyFeature {
     private init() {}
     public static let shared = MyFeature()
 
-    var bundle: Bundle! {
+    public var bundle: Bundle! {
         let podBundle: Bundle! = Bundle(for: MyFeature.self)
         let bundleUrl: URL! = podBundle.url(forResource: "MyFeature",
                                             withExtension: "bundle")
@@ -11,7 +11,7 @@ final public class MyFeature {
     }
     
     @discardableResult
-    public func showOverlay(from viewController: UIViewController) -> OverlayView {
+    public func presentOverlay(from viewController: UIViewController) -> OverlayView {
         let overlayView: OverlayView! = bundle
             .loadNibNamed("OverlayView",
                           owner: nil,
